@@ -47,16 +47,16 @@ public class SymbolTable {
         return this.symbolTable.get(position.getChainIndex()).get(position.getChainPosition());
     }
 
-    public boolean contains(String term) {
-        return this.getPosition(term) != null;
+    public boolean contains(String element) {
+        return this.getPosition(element) != null;
     }
 
-    public boolean add(String term) {
-        if(contains(term)) {
+    public boolean add(String element) {
+        if(contains(element)) {
             return false;
         }
-        int key = this.hash(term);
-        this.symbolTable.get(key).add(term);
+        int key = this.hash(element);
+        this.symbolTable.get(key).add(element);
 
         return true;
     }
