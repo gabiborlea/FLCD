@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 
 public class SymbolTable {
-    private Integer capacity;
+    private int capacity;
     private ArrayList<ArrayList<String>> symbolTable;
 
-    public SymbolTable(Integer capacity) {
+    public SymbolTable(int capacity) {
         this.capacity = capacity;
         this.symbolTable = new ArrayList<>();
         for (int i = 0; i < this.capacity; i++) {
@@ -12,7 +12,7 @@ public class SymbolTable {
         }
     }
 
-    private Integer hash(String key) {
+    private int hash(String key) {
         int hash = 0;
         for (int i = 0; i < key.length(); i++) {
             hash = (hash + key.charAt(i)) % capacity;
@@ -20,15 +20,15 @@ public class SymbolTable {
         return hash % capacity;
     }
 
-    public Position getPosition(String term) {
-        int chainIndex = this.hash(term);
+    public Position getPosition(String element) {
+        int chainIndex = this.hash(element);
 
         if (this.symbolTable.get(chainIndex).isEmpty())
             return null;
 
         ArrayList<String> chain = this.symbolTable.get(chainIndex);
         for (int i = 0; i < chain.size(); i++) {
-            if (chain.get(i).equals(term)) {
+            if (chain.get(i).equals(element)) {
                 return new Position(chainIndex, i);
             }
         }
