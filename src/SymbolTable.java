@@ -1,0 +1,63 @@
+import java.util.ArrayList;
+
+public class SymbolTable {
+    private Integer capacity;
+    private ArrayList<ArrayList<String>> symbolTable;
+
+    public SymbolTable(Integer capacity) {
+        this.capacity = capacity;
+        this.symbolTable = new ArrayList<>();
+        for (int i = 0; i < this.capacity; i++) {
+            this.symbolTable.add(new ArrayList<>());
+        }
+    }
+
+    private Integer hash(String key) {
+        int hash = 0;
+        for (int i = 0; i < key.length(); i++) {
+            hash = (hash + key.charAt(i)) % capacity;
+        }
+        return hash % capacity;
+    }
+
+    public Position getPosition(String term) {
+        int chainIndex = this.hash(term);
+
+        if (this.symbolTable.get(chainIndex).isEmpty())
+            return null;
+
+        ArrayList<String> chain = this.symbolTable.get(chainIndex);
+        for (int i = 0; i < chain.size(); i++) {
+            if (chain.get(i).equals(term)) {
+                return new Position(chainIndex, i);
+            }
+        }
+        return null;
+    }
+
+    public String get(Position position) {
+        if (this.symbolTable.size() <= position.getChainIndex()) {
+            return null;
+        }
+
+        if (this.symbolTable.get(position.getChainIndex()).size() <= position.getChainPosition()) {
+            return null;
+        }
+
+        return this.symbolTable.get(position.getChainIndex()).get(position.getChainPosition());
+    }
+
+    public boolean contains(String term) {
+        return this.getPosition(term) != null;
+    }
+
+    public boolean add(String term) {
+        if(contains(term)) {
+            return false;
+        }
+        int key = this.hash(term);
+        this.symbolTable.get(key).add(term);
+
+        return true;
+    }
+}
