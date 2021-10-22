@@ -1,0 +1,19 @@
+int number1, number2, number3.
+int max.
+giveInput(number1).
+giveInput(number2).
+giveInput(number1).
+
+if number1 > number2 and number2 > number3 start
+	max = number1.
+stop
+
+if number2 > number3 and number3 > number1 start
+	max = number2.
+stop
+
+if number3 > number2 and number2 > number1 start
+	max = number3.
+stop
+
+getOutput(max).
