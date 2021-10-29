@@ -1,0 +1,81 @@
+0 = code:2 int
+1 = code:1 [
+2 = code:4 100 Position{chainIndex=5, chainPosition=0}
+3 = code:1 ]
+4 = code:3 array Position{chainIndex=3, chainPosition=0}
+5 = code:1 .
+6 = code:2 int
+7 = code:3 arraySize Position{chainIndex=4, chainPosition=0}
+8 = code:1 ,
+9 = code:3 sum Position{chainIndex=1, chainPosition=0}
+10 = code:0 =
+11 = code:4 0 Position{chainIndex=8, chainPosition=0}
+12 = code:1 .
+13 = code:2 giveInput
+14 = code:1 (
+15 = code:3 arraySize Position{chainIndex=4, chainPosition=0}
+16 = code:1 )
+17 = code:1 .
+18 = code:3 for Position{chainIndex=7, chainPosition=0}
+19 = code:1 (
+20 = code:2 int
+21 = code:3 i Position{chainIndex=5, chainPosition=1}
+22 = code:0 =
+23 = code:4 0 Position{chainIndex=8, chainPosition=0}
+24 = code:1 .
+25 = code:3 i Position{chainIndex=5, chainPosition=1}
+26 = code:0 <
+27 = code:3 arraySize Position{chainIndex=4, chainPosition=0}
+28 = code:1 .
+29 = code:3 i Position{chainIndex=5, chainPosition=1}
+30 = code:0 =
+31 = code:3 i Position{chainIndex=5, chainPosition=1}
+32 = code:0 +
+33 = code:4 1 Position{chainIndex=9, chainPosition=0}
+34 = code:1 )
+35 = code:2 start
+36 = code:2 giveInput
+37 = code:1 (
+38 = code:3 array Position{chainIndex=3, chainPosition=0}
+39 = code:1 [
+40 = code:3 i Position{chainIndex=5, chainPosition=1}
+41 = code:1 ]
+42 = code:1 )
+43 = code:1 .
+44 = code:2 stop
+45 = code:3 for Position{chainIndex=7, chainPosition=0}
+46 = code:1 (
+47 = code:2 int
+48 = code:3 i Position{chainIndex=5, chainPosition=1}
+49 = code:0 =
+50 = code:4 0 Position{chainIndex=8, chainPosition=0}
+51 = code:1 .
+52 = code:3 i Position{chainIndex=5, chainPosition=1}
+53 = code:0 <
+54 = code:3 arraySize Position{chainIndex=4, chainPosition=0}
+55 = code:1 .
+56 = code:3 i Position{chainIndex=5, chainPosition=1}
+57 = code:0 =
+58 = code:3 i Position{chainIndex=5, chainPosition=1}
+59 = code:0 +
+60 = code:4 1 Position{chainIndex=9, chainPosition=0}
+61 = code:1 )
+62 = code:2 start
+63 = code:3 sum Position{chainIndex=1, chainPosition=0}
+64 = code:0 =
+65 = code:3 sum Position{chainIndex=1, chainPosition=0}
+66 = code:0 +
+67 = code:3 array Position{chainIndex=3, chainPosition=0}
+68 = code:1 [
+69 = code:3 i Position{chainIndex=5, chainPosition=1}
+70 = code:1 ]
+71 = code:1 .
+72 = code:2 stop
+73 = code:2 getOutput
+74 = code:1 (
+75 = code:4 "The sum of the array is " Position{chainIndex=7, chainPosition=1}
+76 = code:0 +
+77 = code:3 sum Position{chainIndex=1, chainPosition=0}
+78 = code:1 )
+79 = code:1 .
+

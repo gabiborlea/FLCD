@@ -1,0 +1,14 @@
+int[100] array.
+int arraySize, sum = 0.
+
+giveInput(arraySize).
+
+for (int i = 0. i < arraySize. i = i + 1) start
+	giveInput(array[i]).
+stop
+
+for (int i = 0. i < arraySize. i = i + 1) start
+	sum = sum + array[i].
+stop
+
+getOutput("The sum of the array is " + sum).

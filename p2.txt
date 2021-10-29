@@ -1,0 +1,16 @@
+int number, i = 0.
+bool isPrime = true.
+giveInput(number).
+
+while (isPrime and i * i <= number) start
+	if (number % i == 0) start
+		isPrime = false.
+	stop
+	i = i + 1.
+stop
+
+if (isPrime) start
+	getOutput(number + " is prime").
+else
+	getOutput(number + " is not prime").
+stop

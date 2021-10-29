@@ -1,0 +1,7 @@
+int a = 5 - 7.
+char[100] 2variable.
+char[5] name = "EUUUU.
+
+giveInput(2variable).
+
+getOutput(name + 2variable).
