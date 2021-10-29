@@ -1,0 +1,3 @@
++,-,*,/,%,<,>,<=,==,>=,=
+(,),., ,{,},[,],(,),"
+int,bool,string,char,const,start,stop,if,else,giveInput,getOutput,while,and,or,true,false

@@ -14,4 +14,12 @@ public class Position {
     public Integer getChainPosition() {
         return this.chainPosition;
     }
+
+    @Override
+    public String toString() {
+        return "Position{" +
+                "chainIndex=" + chainIndex +
+                ", chainPosition=" + chainPosition +
+                '}';
+    }
 }

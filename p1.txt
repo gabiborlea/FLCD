@@ -1,3 +1,6 @@
+a >= 7
+string a = "aaaaa".
+char b = '2'.
 int number1, number2, number3.
 int max.
 giveInput(number1).

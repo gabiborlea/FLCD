@@ -15,7 +15,7 @@ public class SymbolTable {
     private int hash(String key) {
         int hash = 0;
         for (int i = 0; i < key.length(); i++) {
-            hash = (hash + key.charAt(i)) % capacity;
+            hash = (hash + key.charAt(i));
         }
         return hash % capacity;
     }
@@ -63,8 +63,10 @@ public class SymbolTable {
 
     @Override
     public String toString() {
-        return "SymbolTable{" +
-                "symbolTable=" + symbolTable +
-                '}';
+        StringBuilder data = new StringBuilder();
+        for (int i = 0; i < this.symbolTable.size(); i++) {
+            data.append(i).append(" = ").append(this.symbolTable.get(i)).append("\n");
+        }
+        return data.toString();
     }
 }
