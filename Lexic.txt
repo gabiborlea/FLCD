@@ -1,0 +1,30 @@
+Alphabet:
+a. Upper (A-Z) and lower case letters (a-z) of the English alphabet
+b. Decimal digits (0-9);
+c. Space character ' ';
+
+Lexic:
+a.Special symbols, representing:
+- operators + - * / % < <= == >= >
+- separators () . space {} [] newline "
+- reserved words: int bool string char const start stop if else giveInput getOutput while and or true false
+b.identifiers
+-a sequence of letters and  digits, such that the first character is a letter; the rule is:
+	identifier := letter | ({letter} | {digit})
+	capitalLetter = "A" | "B" | ...| "Z"
+	smallLettter = "a" | "b" | ... | "z"
+	letter := capitalLetter | smallLetter
+	digit := "0" | "1" |...| "9"
+c.constants
+
+1.integer:
+	number := nonzerodigit{digit} | digit
+	nonzerodigit := "1" | ... | "9"
+	constnumber := [("+" | "-")] number | number
+2.character:
+	character:='letter'|'digit'|' '
+3.string:
+	string := "{letter | digit| space}"
+4.boolean:
+	bool := true | false
+
