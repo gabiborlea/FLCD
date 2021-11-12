@@ -15,12 +15,16 @@ public class LanguageScanner {
     private ProgramInternalForm PIF;
     private String pathSourceCode;
     private ArrayList<String> errors;
+    private FA faIdentifier;
+    private FA faIntConstant;
 
     public LanguageScanner(String pathSourceCode) {
         this.pathSourceCode = pathSourceCode;
         this.symbolTable = new SymbolTable(10);
         this.PIF = new ProgramInternalForm();
         this.errors = new ArrayList<>();
+        this.faIdentifier = new FA("FA_identifier.in");
+        this.faIntConstant = new FA("FA_int_constant.in");
         readTokens();
     }
 
@@ -65,11 +69,13 @@ public class LanguageScanner {
 
     }
     private boolean isIdentifier(String symbol) {
-        return Pattern.compile("[A-Za-z][a-zA-Z0-9]*").matcher(symbol).matches();
+//        return Pattern.compile("[A-Za-z][a-zA-Z0-9]*").matcher(symbol).matches();
+        return this.faIdentifier.checkAccepted(symbol);
     }
 
     private boolean isConstant(String symbol, boolean isString) {
-        if(symbol.matches("-?\\d+") && !isString)
+//        if(symbol.matches("-?\\d+") && !isString)
+        if (this.faIntConstant.checkAccepted(symbol) && !isString)
             return true;
         if(symbol.matches("\"[a-zA-Z0-9 ]*\"") && isString)
             return true;

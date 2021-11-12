@@ -5,3 +5,4 @@ char[5] name = "EUUUU.
 giveInput(2variable).
 
 getOutput(name + 2variable).
+
